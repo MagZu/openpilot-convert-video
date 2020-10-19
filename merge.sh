@@ -2,7 +2,7 @@
 
 
 find . -name dcamera.hevc |sort -t - -k3,3n  -k4,4n -k5,5n -k6,6n -k7,7n -k8,8n -k9,9n | sed 's:\ :\\\ :g'| sed 's/^/file /' > dl.txt; ffmpeg -f concat -safe 0 -i dl.txt -c copy dcamera.hevc; rm dl.txt
-find . -name dcamera.hevc |sort -t - -k3,3n  -k4,4n -k5,5n -k6,6n -k7,7n -k8,8n -k9,9n | sed 's:\ :\\\ :g'| sed 's/^/file /' > fl.txt; ffmpeg -f concat -safe 0 -i fl.txt -c copy fcamera.hevc; rm fl.txt
+find . -name fcamera.hevc |sort -t - -k3,3n  -k4,4n -k5,5n -k6,6n -k7,7n -k8,8n -k9,9n | sed 's:\ :\\\ :g'| sed 's/^/file /' > fl.txt; ffmpeg -f concat -safe 0 -i fl.txt -c copy fcamera.hevc; rm fl.txt
 
 
 
